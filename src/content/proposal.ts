@@ -163,10 +163,12 @@ export const products: Product[] = [
       { label: "Development (10 hrs/mo)", value: "$1,000 USD / month" },
       { label: "Months 1–6 total", value: "$6,334.50 USD / month" },
       { label: "Month 7 onwards", value: "$4,250 USD / month" },
+      { label: "Year 1 total", value: "$63,507 USD" },
+      { label: "Years 2–5 (each)", value: "$51,000 USD" },
       { label: "5-year total", value: "$267,507 USD" },
     ],
     pricingNote:
-      "Source: Client MVNO PWA Support — Pricing Model V4 (MVNE 20260223).",
+      "Source: Client MVNO PWA Support — Pricing Model (MVNE 20260223 v2). Setup spread across 6 monthly payments instead of once-off.",
   },
   {
     number: "03",
@@ -180,10 +182,10 @@ export const products: Product[] = [
     headlinePriceNote: "setup + 10% revenue share to GCT",
     features: [
       "Branded eSIM purchase and activation inside the GCT app or PWA",
-      "5GB and 2.5GB bundles at $18.07 and $9.04 ARPU respectively (30% margin)",
-      "Coverage across the top 20 outbound destinations",
+      "5GB and 2.5GB bundles at $18.07 and $9.035 ARPU respectively (30% margin)",
+      "Coverage across the top 20 outbound destinations (rates ex VAT)",
       "Once-off setup billed monthly across 6 months (no longer once-off)",
-      "Revenue share to GCT on every activation",
+      "10% of MVNE Net to GCT on every activation",
     ],
     outcomes: [
       "New roaming revenue line with no roaming partner negotiation",
@@ -192,12 +194,14 @@ export const products: Product[] = [
     ],
     pricing: [
       { label: "Once-off setup", value: "$3,200 USD", note: "Billed as 6 × $533.33/month" },
-      { label: "5GB bundle", value: "$18.07 USD ARPU", note: "30% net margin" },
-      { label: "2.5GB bundle", value: "$9.04 USD ARPU", note: "30% net margin" },
+      { label: "5GB bundle", value: "$18.07 USD ARPU", note: "30% net margin (ex VAT)" },
+      { label: "2.5GB bundle", value: "$9.035 USD ARPU", note: "30% net margin (ex VAT)" },
       { label: "Revenue share to GCT", value: "10% of MVNE Net" },
+      { label: "Target market (2026 → 2030)", value: "5.5M → 6.7M outbound travellers" },
+      { label: "Base-case attach rate", value: "3% Yr 1 → 8% Yr 5" },
     ],
     pricingNote:
-      "Source: Travel eSIM Pricing Model — base case attach rate 3% Yr 1 ramping to 8% Yr 5.",
+      "Source: Travel eSIM Pricing Model — Model Parameters (ex VAT). Worse-case attach 2%–4.5%, base 3%–8%, best 5%–12%.",
   },
   {
     number: "04",
@@ -304,15 +308,15 @@ export const products: Product[] = [
     ],
     pricing: [
       { label: "Setup (Dashboard activation)", value: "$2,500 USD", note: "Billed as 6 × $416.67/month" },
-      { label: "BD Security w/DIP — 1 device", value: "$1.35 USD / month" },
-      { label: "BD Security w/DIP — 5 devices", value: "$2.98 USD / month" },
-      { label: "BD Security w/DIP — 10 devices", value: "$4.25 USD / month" },
-      { label: "w/DWM & VPN — 1 device", value: "$2.30 USD / month" },
-      { label: "w/DWM & VPN — 5 devices", value: "$3.93 USD / month" },
-      { label: "w/DWM & VPN — 10 devices", value: "$6.53 USD / month" },
+      { label: "BD Security w/DIP — 1 device", value: "$1.350 USD / month", note: "ZAR 22.815 / month" },
+      { label: "BD Security w/DIP — 5 devices", value: "$2.975 USD / month", note: "ZAR 50.2775 / month" },
+      { label: "BD Security w/DIP — 10 devices", value: "$4.250 USD / month", note: "ZAR 71.825 / month" },
+      { label: "w/DWM & VPN — 1 device", value: "$2.300 USD / month", note: "ZAR 38.870 / month" },
+      { label: "w/DWM & VPN — 5 devices", value: "$3.925 USD / month", note: "ZAR 66.3325 / month" },
+      { label: "w/DWM & VPN — 10 devices", value: "$6.525 USD / month", note: "ZAR 110.2725 / month" },
     ],
     pricingNote:
-      "Source: Bitdefender Commercials — Standard Pricing & Margin Calculator. Pay-as-you-go, no minimum commitments. ROE 16.9 ZAR/USD.",
+      "Source: Bitdefender Commercials — Standard Pricing & Margin Calculator. Pay-as-you-go, no minimum commitments. 60% net margin to client. ROE 16.9 ZAR/USD. International pricing identical (USD only).",
   },
   {
     number: "08",
