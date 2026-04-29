@@ -1,43 +1,47 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { hero, company } from "@/content/proposal";
+import { hero } from "@/content/proposal";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-border/60"
+      className="relative bg-[#0f172a] text-white"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,theme(colors.zinc.100),transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top,theme(colors.zinc.900),transparent_60%)]" />
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-24 md:py-32">
-        <Badge variant="secondary" className="w-fit">
-          {hero.eyebrow}
-        </Badge>
-        <h1 className="font-heading max-w-4xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-          {hero.title}
+      <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
+        <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(56,189,248,0.08)] px-3 py-1.5 ring-1 ring-[rgba(56,189,248,0.25)]">
+          <span className="size-1.5 rounded-full bg-[#38bdf8]" />
+          <span className="text-xs font-semibold tracking-wide text-white">
+            {hero.eyebrow}
+          </span>
+        </div>
+
+        <h1 className="mt-8 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+          <span className="block text-white">{hero.titleLine1}</span>
+          <span className="mt-1 block text-[#38bdf8]">{hero.titleLine2}</span>
         </h1>
-        <p className="max-w-3xl text-lg text-muted-foreground md:text-xl">
+
+        <div className="mt-6 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />
+
+        <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
           {hero.subtitle}
         </p>
-        <div className="mt-2 flex flex-wrap items-center gap-3">
-          {hero.ctas.map((cta) => (
-            <Button
-              key={cta.href}
-              variant={cta.variant}
-              size="lg"
-              render={<Link href={cta.href} />}
-            >
-              {cta.label}
-            </Button>
-          ))}
-        </div>
-        <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2 text-xs text-muted-foreground">
-          <span>Prepared by {company.shortName} & {company.partner}</span>
-          <span className="hidden md:inline">•</span>
-          <span>For {company.client}</span>
-          <span className="hidden md:inline">•</span>
-          <span>Decision deadline: {company.decisionDeadline}</span>
+
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <Button
+            size="lg"
+            className="rounded-lg bg-[#c8102e] px-6 py-3 text-base font-bold text-white hover:bg-[#a30d26]"
+            render={<Link href={hero.ctas[0].href} />}
+          >
+            {hero.ctas[0].label}
+          </Button>
+          <Button
+            size="lg"
+            className="rounded-lg bg-white/10 px-6 py-3 text-base font-semibold text-white hover:bg-white/15"
+            render={<Link href={hero.ctas[1].href} />}
+          >
+            {hero.ctas[1].label}
+          </Button>
         </div>
       </div>
     </section>

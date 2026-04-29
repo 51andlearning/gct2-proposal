@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "GCT Group — DSG & MVNE Product Suite 2026+",
+  title: "GCT Group | DSG & MVNE Product Suite 2026+",
   description:
-    "DSG & MVNE proposal to GCT Group: a curated suite of nine digital products to deliver fixed-mobile convergence and accelerate digital transformation.",
+    "A curated suite of proven digital products and transformation services to position GCT Group as Nigeria's first fully converged, cloud-enabled digital telecoms provider.",
 };
 
 export default function RootLayout({
@@ -26,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}
       </body>
     </html>

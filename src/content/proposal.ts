@@ -21,13 +21,14 @@ export const navLinks = [
 ];
 
 export const hero = {
-  eyebrow: "Proposal — DSG & MVNE",
-  title: "GCT Group DSG & MVNE Product Suite 2026+",
+  eyebrow: "Confidential · For GCT Group Executive & Board Review",
+  titleLine1: "GCT Group",
+  titleLine2: "DSG & MVNE Product Suite 2026+",
   subtitle:
-    "A curated suite of proven digital products to transform GCT from a traditional ISP into Nigeria's first fully converged, cloud-enabled digital telco.",
+    "A curated suite of proven digital products and transformation services to position GCT Group as Nigeria's first fully converged, cloud-enabled digital telecoms provider.",
   ctas: [
     { label: "Accept Proposals", href: "#acceptance", variant: "default" as const },
-    { label: "View Products", href: "#products", variant: "outline" as const },
+    { label: "View Products", href: "#products", variant: "secondary" as const },
   ],
 };
 
@@ -92,6 +93,8 @@ export type Product = {
   shortName: string;
   tagline: string;
   description: string;
+  headlinePrice: string;
+  headlinePriceNote: string;
   features: string[];
   outcomes: string[];
   pricing: { label: string; value: string; note?: string }[];
@@ -108,6 +111,8 @@ export const products: Product[] = [
     tagline: "Design — Build & Operate — Transfer",
     description:
       "A nine-month, end-to-end MVNO transformation programme that delivers a launched, operating MVNO and transfers it back to GCT with a 60-month business plan and full operating model.",
+    headlinePrice: "$250,000",
+    headlinePriceNote: "fixed fee · 9 months",
     features: [
       "Design phase (8 weeks): strategy, business model, GTM, target operating model",
       "Build & Operate phase (6 months): Transformation Project Office, MVP launch, integrated CX journeys",
@@ -138,6 +143,8 @@ export const products: Product[] = [
     tagline: "Self-service PWA + ongoing Tier 3 support & development",
     description:
       "A branded Progressive Web App for GCT subscribers — self-service, top-ups, bundles, KYC, account management — built on the MVNE platform with on-going Tier 3 support and a guaranteed development backlog.",
+    headlinePrice: "$12,507",
+    headlinePriceNote: "setup over 6 months + $4,250/month",
     features: [
       "Branded PWA with self-service, top-up, bundle and KYC flows",
       "Tier 3 support — 40 hours per month included",
@@ -169,6 +176,8 @@ export const products: Product[] = [
     tagline: "Outbound roaming eSIM, branded for GCT",
     description:
       "A turnkey, app-driven Travel eSIM proposition for GCT's outbound travellers — instant activation, transparent bundles and a recurring revenue share back to GCT.",
+    headlinePrice: "$3,200",
+    headlinePriceNote: "setup + 10% revenue share to GCT",
     features: [
       "Branded eSIM purchase and activation inside the GCT app or PWA",
       "5GB and 2.5GB bundles at $18.07 and $9.04 ARPU respectively (30% margin)",
@@ -198,6 +207,8 @@ export const products: Product[] = [
     tagline: "Omni-channel customer experience",
     description:
       "Outsourced or co-managed customer experience operation — voice, chat, social, AI agents, ticketing and quality — built specifically for telco and digital subscribers.",
+    headlinePrice: "Custom",
+    headlinePriceNote: "based on requirements",
     features: [
       "Omni-channel: voice, WhatsApp, web chat, email, social",
       "AI agents and assisted-agent workflows",
@@ -223,6 +234,8 @@ export const products: Product[] = [
     tagline: "Customer Value Management",
     description:
       "Real-time CVM platform for personalised offers, churn prediction and base-management campaigns across the subscriber lifecycle.",
+    headlinePrice: "Custom",
+    headlinePriceNote: "platform licence",
     features: [
       "Real-time event-driven campaign engine",
       "Churn, upsell and next-best-offer ML models",
@@ -248,6 +261,8 @@ export const products: Product[] = [
     tagline: "AI personalisation, per subscriber",
     description:
       "Subscriber-level AI personalisation layer — content, offers, and journeys tailored to each customer in real time.",
+    headlinePrice: "Custom",
+    headlinePriceNote: "per-subscriber model",
     features: [
       "Per-subscriber model serving and feature store",
       "Real-time personalisation across app, PWA, USSD and CRM",
@@ -273,6 +288,8 @@ export const products: Product[] = [
     tagline: "Subscriber cyber-protection bundles",
     description:
       "White-label Bitdefender security products — for 1, 5 or 10 devices — that GCT can sell to subscribers as a digital add-on, with optional Digital Identity Protection (DIP), Dark-Web Monitoring (DWM) and VPN.",
+    headlinePrice: "$2,500 setup",
+    headlinePriceNote: "+ per-device monthly · 60% margin",
     features: [
       "BD Security w/DIP — 1, 5 or 10 device tiers",
       "BD Security w/DWM & VPN — 1, 5 or 10 device tiers",
@@ -305,6 +322,8 @@ export const products: Product[] = [
     tagline: "Multi-channel Agent & Reseller System",
     description:
       "Agent, reseller and dealer management system — onboarding, provisioning, commissions and field force tooling for GCT's distribution.",
+    headlinePrice: "Custom",
+    headlinePriceNote: "pricing on request",
     features: [
       "Agent & reseller onboarding with KYC",
       "Real-time commissions and reconciliation",
@@ -330,6 +349,8 @@ export const products: Product[] = [
     tagline: "Voucher Management System",
     description:
       "End-to-end voucher and recharge management — secure generation, distribution, redemption and reporting across GCT's channels.",
+    headlinePrice: "Custom",
+    headlinePriceNote: "based on voucher volume",
     features: [
       "Secure voucher generation and lifecycle management",
       "Multi-channel distribution (USSD, PWA, retail)",

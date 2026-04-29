@@ -1,19 +1,18 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { dbotPhases } from "@/content/proposal";
 
 export function DBOT() {
   return (
-    <section id="dbot" className="border-b border-border/60 bg-foreground text-background">
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-        <div className="mb-14 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground/80">
+    <section id="dbot" className="bg-[#0f172a]">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <div className="mb-12 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#38bdf8]">
             Featured programme
           </p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
             DBOT — Design, Build &amp; Operate, Transfer
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-background/70 md:text-lg">
+          <div className="mt-4 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />
+          <p className="mt-6 text-base leading-relaxed text-white/75 md:text-lg">
             A nine-month, end-to-end MVNO transformation that delivers a
             launched, operating MVNO and transfers it back to GCT with a
             60-month business plan and full operating model.
@@ -22,33 +21,32 @@ export function DBOT() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {dbotPhases.map((phase, i) => (
-            <Card key={phase.phase} className="bg-background text-foreground">
-              <CardHeader>
-                <Badge variant="outline" className="w-fit font-mono">
-                  0{i + 1}
-                </Badge>
-                <CardTitle className="mt-2">{phase.phase}</CardTitle>
-                <CardDescription>{phase.duration}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {phase.summary}
-                </p>
-                <div>
-                  <p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                    Deliverables
-                  </p>
-                  <ul className="space-y-1.5 text-sm">
-                    {phase.deliverables.map((d, j) => (
-                      <li key={j} className="flex gap-2">
-                        <span className="mt-2 size-1 shrink-0 rounded-full bg-foreground" />
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <article
+              key={phase.phase}
+              className="rounded-xl bg-[#1e293b] p-6 ring-1 ring-white/10"
+            >
+              <span className="rounded-full bg-[#0369a1] px-3 py-1 text-xs font-bold tracking-wide text-white">
+                Phase 0{i + 1}
+              </span>
+              <h3 className="mt-4 text-xl font-extrabold text-white">{phase.phase}</h3>
+              <p className="mt-1 text-sm font-medium text-[#38bdf8]">
+                {phase.duration}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                {phase.summary}
+              </p>
+              <h4 className="mt-6 text-xs font-bold uppercase tracking-widest text-white/60">
+                Deliverables
+              </h4>
+              <ul className="mt-3 space-y-2 text-sm text-white/80">
+                {phase.deliverables.map((d, j) => (
+                  <li key={j} className="flex gap-2">
+                    <span className="mt-1.5 size-1 shrink-0 rounded-full bg-[#38bdf8]" />
+                    <span>{d}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>
