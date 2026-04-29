@@ -143,14 +143,14 @@ export const products: Product[] = [
     tagline: "Self-service PWA + ongoing Tier 3 support & development",
     description:
       "A branded Progressive Web App for GCT subscribers — self-service, top-ups, bundles, KYC, account management — built on the MVNE platform with on-going Tier 3 support and a guaranteed development backlog.",
-    headlinePrice: "$12,507",
-    headlinePriceNote: "setup over 6 months + $4,250/month",
+    headlinePrice: "From $6,334.50/mo",
+    headlinePriceNote: "Months 1–6 · drops to $4,250/mo from Month 7",
     features: [
       "Branded PWA with self-service, top-up, bundle and KYC flows",
       "Tier 3 support — 40 hours per month included",
       "Product development — 10 hours per month included",
       "Continuous deployment, observability and SLA reporting",
-      "Setup fee billed monthly across the first 6 months (no longer once-off)",
+      "Set-up & development built in as a $2,084.50 minimum monthly commitment for the first 6 months ($12,507 total)",
     ],
     outcomes: [
       "Branded subscriber app live within the build window",
@@ -158,17 +158,17 @@ export const products: Product[] = [
       "Faster cycle time on new bundles, promotions and journeys",
     ],
     pricing: [
-      { label: "Setup & development", value: "$12,507 USD", note: "Billed as 6 × $2,084.50/month" },
-      { label: "Tier 3 Support (40 hrs/mo)", value: "$3,250 USD / month" },
-      { label: "Development (10 hrs/mo)", value: "$1,000 USD / month" },
+      { label: "Minimum monthly commitment (Months 1–6)", value: "$2,084.50 USD / month", note: "Total $12,507 over 6 months — covers PWA set-up & development" },
+      { label: "Tier 3 Support (40 hrs/mo)", value: "$3,250 USD / month", note: "Recurring from Month 1" },
+      { label: "Development (10 hrs/mo)", value: "$1,000 USD / month", note: "Recurring from Month 1" },
       { label: "Months 1–6 total", value: "$6,334.50 USD / month" },
-      { label: "Month 7 onwards", value: "$4,250 USD / month" },
+      { label: "Month 7 onwards", value: "$4,250 USD / month", note: "Set-up commitment ends" },
       { label: "Year 1 total", value: "$63,507 USD" },
       { label: "Years 2–5 (each)", value: "$51,000 USD" },
       { label: "5-year total", value: "$267,507 USD" },
     ],
     pricingNote:
-      "Source: Client MVNO PWA Support — Pricing Model (MVNE 20260223 v2). Setup spread across 6 monthly payments instead of once-off.",
+      "Source: Client MVNO PWA Support — Pricing Model (MVNE 20260223 v2). Set-up & development is now built in as a minimum monthly commitment for the first 6 months instead of a once-off fee.",
   },
   {
     number: "03",
@@ -178,13 +178,13 @@ export const products: Product[] = [
     tagline: "Outbound roaming eSIM, branded for GCT",
     description:
       "A turnkey, app-driven Travel eSIM proposition for GCT's outbound travellers — instant activation, transparent bundles and a recurring revenue share back to GCT.",
-    headlinePrice: "$3,200",
-    headlinePriceNote: "setup + 10% revenue share to GCT",
+    headlinePrice: "From $533.33/mo",
+    headlinePriceNote: "min. 6-month commitment + 10% revenue share to GCT",
     features: [
       "Branded eSIM purchase and activation inside the GCT app or PWA",
       "5GB and 2.5GB bundles at $18.07 and $9.035 ARPU respectively (30% margin)",
       "Coverage across the top 20 outbound destinations (rates ex VAT)",
-      "Once-off setup billed monthly across 6 months (no longer once-off)",
+      "Minimum monthly commitment of $533.33 for the first 6 months ($3,200 total — covers project set-up & app configuration)",
       "10% of MVNE Net to GCT on every activation",
     ],
     outcomes: [
@@ -193,7 +193,8 @@ export const products: Product[] = [
       "Up to ~535K base-case activations p.a. by Year 5 against GCT's outbound travel base",
     ],
     pricing: [
-      { label: "Once-off setup", value: "$3,200 USD", note: "Billed as 6 × $533.33/month" },
+      { label: "Minimum monthly commitment (Months 1–6)", value: "$533.33 USD / month", note: "Total $3,200 over 6 months — covers project set-up & app configuration" },
+      { label: "Month 7 onwards", value: "Revenue share only", note: "No minimum commitment — 10% of MVNE Net" },
       { label: "5GB bundle", value: "$18.07 USD ARPU", note: "30% net margin (ex VAT)" },
       { label: "2.5GB bundle", value: "$9.035 USD ARPU", note: "30% net margin (ex VAT)" },
       { label: "Revenue share to GCT", value: "10% of MVNE Net" },
@@ -292,13 +293,13 @@ export const products: Product[] = [
     tagline: "Subscriber cyber-protection bundles",
     description:
       "White-label Bitdefender security products — for 1, 5 or 10 devices — that GCT can sell to subscribers as a digital add-on, with optional Digital Identity Protection (DIP), Dark-Web Monitoring (DWM) and VPN.",
-    headlinePrice: "$2,500 setup",
-    headlinePriceNote: "+ per-device monthly · 60% margin",
+    headlinePrice: "From $416.67/mo",
+    headlinePriceNote: "min. 6-month commitment + per-device pricing · 60% margin",
     features: [
       "BD Security w/DIP — 1, 5 or 10 device tiers",
       "BD Security w/DWM & VPN — 1, 5 or 10 device tiers",
-      "Pay-as-you-go pricing — no minimum commitments",
-      "Dashboard activation & set-up billed monthly across the first 6 months",
+      "Pay-as-you-go subscriber pricing — no per-subscriber minimum",
+      "Minimum monthly commitment of $416.67 for the first 6 months ($2,500 total — covers Dashboard activation & set-up)",
       "60% net margin to GCT on retail",
     ],
     outcomes: [
@@ -307,7 +308,8 @@ export const products: Product[] = [
       "Differentiated security proposition in market",
     ],
     pricing: [
-      { label: "Setup (Dashboard activation)", value: "$2,500 USD", note: "Billed as 6 × $416.67/month" },
+      { label: "Minimum monthly commitment (Months 1–6)", value: "$416.67 USD / month", note: "Total $2,500 over 6 months — covers Dashboard activation & set-up" },
+      { label: "Month 7 onwards", value: "Pay-as-you-go", note: "No minimum commitment — per-device pricing only" },
       { label: "BD Security w/DIP — 1 device", value: "$1.350 USD / month", note: "ZAR 22.815 / month" },
       { label: "BD Security w/DIP — 5 devices", value: "$2.975 USD / month", note: "ZAR 50.2775 / month" },
       { label: "BD Security w/DIP — 10 devices", value: "$4.250 USD / month", note: "ZAR 71.825 / month" },
