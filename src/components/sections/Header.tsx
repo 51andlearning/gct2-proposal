@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/content/proposal";
 
@@ -11,12 +12,14 @@ export function Header() {
           className="flex items-center gap-3"
           aria-label="DSG — GCT Group Proposal home"
         >
-          <span
-            className="grid place-items-center rounded-md border-[3px] border-[#c8102e] px-2.5 py-1 text-2xl font-black tracking-tight text-[#c8102e]"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            DSG
-          </span>
+          <Image
+            src="/images/logos/dsg-header.png"
+            alt="DSG"
+            width={138}
+            height={65}
+            className="h-12 w-auto"
+            priority
+          />
           <span className="hidden text-xs font-medium tracking-[0.18em] text-white/70 sm:inline">
             | GCT Group Proposal
           </span>

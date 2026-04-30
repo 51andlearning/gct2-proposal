@@ -59,6 +59,7 @@ export const divisions = [
   {
     name: "MVNE",
     tagline: "Mobile Virtual Network Enabler",
+    logo: "/images/logos/mvne.png",
     description:
       "MVNE powers mobile virtual network operators across Africa, providing the full stack of platform services, ecosystem management, and value-added solutions needed to launch and run a successful MVNO.",
     features: [
@@ -74,6 +75,7 @@ export const divisions = [
   {
     name: "CXG",
     tagline: "Customer Experience Group",
+    logo: "/images/logos/cxg.png",
     description:
       "CXG delivers world-class omni-channel customer experience services — combining human expertise with intelligent technology to build lasting customer relationships at every touchpoint.",
     features: [
@@ -89,6 +91,7 @@ export const divisions = [
   {
     name: "Digitalise",
     tagline: "Design & Development Studio",
+    logo: "/images/logos/digitalise.png",
     description:
       "Digitalise is DSG's creative and technical engine — transforming business ideas into polished digital products. From strategy through to code, Digitalise builds the platforms and experiences that power modern digital operators.",
     features: [
@@ -104,6 +107,7 @@ export const divisions = [
   {
     name: "BroadBrand",
     tagline: "AI-Driven Mobile Media Marketing",
+    logo: "/images/logos/broadbrand.png",
     description:
       "BroadBrand combines AI-powered marketing automation with deep mobile expertise to help telecoms brands grow subscriber bases, reduce churn, and maximise customer lifetime value through intelligent, data-led campaigns.",
     features: [
@@ -119,6 +123,7 @@ export const divisions = [
   {
     name: "digitalmall.com",
     tagline: "Turnkey E-Commerce Platform",
+    logo: "/images/logos/digitalmall.png",
     description:
       "digitalmall.com enables telecoms operators and enterprises to launch branded online stores quickly and cost-effectively — selling devices, SIMs, bundles, and accessories without the complexity of building custom e-commerce infrastructure.",
     features: [
@@ -134,6 +139,7 @@ export const divisions = [
   {
     name: "Digital Resilience",
     tagline: "Managed Cybersecurity Services",
+    logo: "/images/logos/digital-resilience.png",
     description:
       "Digital Resilience protects businesses and their customers from evolving digital threats — delivering enterprise-grade cybersecurity as a managed service, combined with consumer-facing security products for MVNOs.",
     features: [
