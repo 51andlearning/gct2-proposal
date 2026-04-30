@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { acceptance, products } from "@/content/proposal";
+import { acceptance, products, termsAndConditions } from "@/content/proposal";
 import { CheckCircle2 } from "lucide-react";
 
 export function Acceptance() {
@@ -23,7 +23,7 @@ export function Acceptance() {
             04 — {acceptance.title}
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
-            Accept the products GCT wishes to take forward.
+            Accept the proposals GCT wishes to take forward.
           </h2>
           <div className="mt-4 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />
           <p className="mt-6 text-base leading-relaxed text-white/75 md:text-lg">
@@ -31,7 +31,7 @@ export function Acceptance() {
           </p>
         </div>
 
-        <div className="rounded-xl bg-[#1e293b] p-6 ring-1 ring-white/10">
+        <div className="rounded-xl bg-white/5 p-6 ring-1 ring-white/10">
           <div className="mb-4 flex items-baseline justify-between">
             <h3 className="text-lg font-extrabold text-white">Product selection</h3>
             <span className="text-sm text-white/60">
@@ -65,28 +65,58 @@ export function Acceptance() {
           </div>
         </div>
 
+        <div className="mt-10">
+          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-[#38bdf8]">
+            Terms &amp; Conditions
+          </h3>
+          <div className="mt-4 overflow-hidden rounded-xl ring-1 ring-white/10">
+            <table className="w-full text-sm">
+              <thead className="bg-white/5 text-left">
+                <tr>
+                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-white/60">
+                    Clause
+                  </th>
+                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-white/60">
+                    Detail
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {termsAndConditions.map((row, i) => (
+                  <tr key={i} className="border-t border-white/10 align-top">
+                    <td className="w-1/4 px-4 py-3 font-semibold text-white">
+                      {row.clause}
+                    </td>
+                    <td className="px-4 py-3 text-white/75">{row.detail}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {acceptance.signatories.map((s) => (
             <div
               key={s.party}
-              className="rounded-xl bg-[#1e293b] p-6 ring-1 ring-white/10"
+              className="rounded-xl bg-white/5 p-6 ring-1 ring-white/10"
             >
               <p className="text-xs font-bold uppercase tracking-widest text-white/60">
-                For and on behalf of
+                {s.party}
               </p>
-              <h4 className="mt-1 text-lg font-extrabold text-white">{s.party}</h4>
 
               <div className="mt-5 space-y-4">
                 <SigField label="Name" />
                 <SigField label="Position" />
                 <SigField label="Date" />
                 <div>
-                  <p className="mb-1.5 text-xs font-bold uppercase tracking-widest text-white/60">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-white/60">
                     Signature
                   </p>
-                  <div className="h-20 rounded-md border border-dashed border-white/20 bg-[#0f172a]" />
+                  <div className="grid h-20 place-items-center rounded-md border border-dashed border-white/20 bg-[#0f172a] text-xs text-white/50">
+                    Click to upload signature image
+                  </div>
                 </div>
-                <p className="text-xs text-white/50">{s.role}</p>
               </div>
             </div>
           ))}

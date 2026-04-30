@@ -13,38 +13,39 @@ export function Contact() {
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#38bdf8]">
-              05 — {contact.title}
+              05 — {contact.eyebrow}
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
-              Talk to the DSG / MVNE team.
+              {contact.title}
             </h2>
             <div className="mt-4 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />
             <p className="mt-6 text-base leading-relaxed text-white/75 md:text-lg">
               {contact.intro}
             </p>
             <div className="mt-8 space-y-3 text-sm">
-              <a
-                href={`mailto:${company.contact.email}`}
-                className="flex items-center gap-3 text-white hover:text-[#38bdf8]"
-              >
-                <Mail className="size-4 text-[#38bdf8]" />
-                {company.contact.email}
-              </a>
-              <a
-                href={`tel:${company.contact.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-white hover:text-[#38bdf8]"
-              >
-                <Phone className="size-4 text-[#38bdf8]" />
-                {company.contact.phone}
-              </a>
-              <p className="flex items-center gap-3 text-white/70">
-                <Globe className="size-4 text-[#38bdf8]" />
-                {company.contact.site}
-              </p>
+              <ContactRow icon={<Mail className="size-4 text-[#38bdf8]" />} label="Email">
+                <a
+                  href={`mailto:${company.contact.email}`}
+                  className="hover:text-[#38bdf8]"
+                >
+                  {company.contact.email}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<Phone className="size-4 text-[#38bdf8]" />} label="Phone">
+                <a
+                  href={`tel:${company.contact.phone.replace(/\s/g, "")}`}
+                  className="hover:text-[#38bdf8]"
+                >
+                  {company.contact.phone}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<Globe className="size-4 text-[#38bdf8]" />} label="Website">
+                <span className="text-white/70">{company.contact.site}</span>
+              </ContactRow>
             </div>
           </div>
 
-          <div className="rounded-xl bg-[#1e293b] p-6 ring-1 ring-white/10">
+          <div className="rounded-xl bg-white/5 p-6 ring-1 ring-white/10">
             <h3 className="text-lg font-extrabold text-white">Send a message</h3>
             <p className="mt-1 text-sm text-white/60">
               We typically respond within one business day.
@@ -79,7 +80,7 @@ export function Contact() {
                     <CheckCircle2 className="size-4" /> Message sent
                   </>
                 ) : (
-                  "Send message"
+                  "Send Message"
                 )}
               </button>
             </form>
@@ -87,6 +88,26 @@ export function Contact() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactRow({
+  icon,
+  label,
+  children,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-baseline gap-3">
+      <span className="mt-0.5">{icon}</span>
+      <span className="w-20 text-xs font-bold uppercase tracking-widest text-white/50">
+        {label}
+      </span>
+      <span className="text-white">{children}</span>
+    </div>
   );
 }
 

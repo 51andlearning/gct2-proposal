@@ -19,6 +19,7 @@ export function Hero() {
         <h1 className="mt-8 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
           <span className="block text-white">{hero.titleLine1}</span>
           <span className="mt-1 block text-[#38bdf8]">{hero.titleLine2}</span>
+          <span className="mt-1 block text-white">{hero.titleLine3}</span>
         </h1>
 
         <div className="mt-6 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />

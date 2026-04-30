@@ -10,7 +10,7 @@ export function Overview() {
               01 — Overview
             </p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-              {overview.title}
+              The DSG &amp; MVNE partnership for GCT Group
             </h2>
             <div className="mt-4 h-1 w-12 rounded-full bg-[#38bdf8]" aria-hidden />
           </div>
